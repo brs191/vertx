@@ -6,10 +6,11 @@ import io.vertx.core.CompositeFuture;
 import io.vertx.ext.web.Router;
 import io.vertx.ext.web.RoutingContext;
 import io.vertx.core.http.HttpServer;
+import io.vertx.ext.jdbc.JDBCClient;
 
 public class MainVerticle extends AbstractVerticle {
 
-//  private JDBCClient dbClient;
+  private JDBCClient dbClient;
 
   private Future<Void> prepareDatabase() {
     Future <Void> future = Future.future();
